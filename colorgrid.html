@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color||Grid</title>
+</head>
+<style>
+    .container
+    {
+        width: 100%;
+        min-width: 50%;
+        height: 400px;
+        margin: auto;
+        background-color: rgb(183, 180, 199);
+    }
+    h3
+    {
+        background-color: blue;
+        padding: 10px;
+        text-align: center;
+        margin: auto;
+        
+    }
+    .box
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    #right
+    {
+        background-color: brown;
+        width: 30%;
+        height: 200px;
+        margin-left: 50px;
+        text-align: center;
+        font-size: larger;
+        color: black;
+        padding-top: 50px;
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px blue;
+    }
+    #left
+    {
+        background-color:chartreuse;
+        width: 30%;
+        height: 200px;
+        margin-right: 50px;
+        text-align: center;
+        font-size: larger;
+        color: #fff;
+        padding-top: 50px;
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px purple;
+    }
+    button
+    {
+        margin-left: 50em;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgb(179, 31, 31);
+        border: 0;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="container">
+        <h3 id="inscription"></h3>
+        <div class="box">
+            <p id="right"></p>
+            <p id="left"></p>
+        </div>
+        <button id="btn" onclick="myBtn()">click me</button>
+    </div>
+
+    <div class="new-container">
+        <p id="grid">Color Grid</p>
+        <button onclick="cbtn()" style="margin-top: 10px;">click to change color</button>
+    </div>
+    <style>
+    #grid
+    {
+        background-color:chartreuse;
+        width: 30%;
+        height: 200px;
+        /* margin-right: 50px; */
+        margin: auto;
+        text-align: center;
+        font-size: larger;
+        color: #fff;
+        padding-top: 50px;
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px purple;
+        margin-top: 40px;
+    }
+    </style>
+
+    <script>
+          function cbtn(){
+            setTimeout(myT1, 2000);
+            setTimeout(myT2, 4000);
+            setTimeout(myT3, 6000);
+            setTimeout(myT4, 8000);
+            setTimeout(myT5, 10000);
+            setTimeout(myT6, 12000);
+        }
+
+        function myT1(){
+            document.getElementById('grid').style.backgroundColor = "red"
+        }
+        function myT2(){
+            document.getElementById('grid').style.backgroundColor = "purple"
+        }
+        function myT3(){
+            document.getElementById('grid').style.backgroundColor = "green"
+        }
+        function myT4(){
+            document.getElementById('grid').style.backgroundColor = "pink"
+        }
+        function myT5(){
+            document.getElementById('grid').style.backgroundColor = "yellow"
+        }
+        function myT6(){
+            document.getElementById('grid').style.backgroundColor = "black"
+        }
+    </script>
+   
+   <script>
+    function myBtn(){
+        // var multicolor = ["green", "gray", "purple"];
+        var show = document.getElementById('inscription');
+        const right = document.getElementById('right');
+        let left = document.getElementById('left');
+        var flipper = document.getElementById('btn');
+
+         var to_change = true
+
+        right.style.backgroundColor = "yellow";
+        right.innerHTML = "you just changed the color";
+        show.innerHTML = "Welcome to my color Grid!!!";
+        left.innerHTML = "you just changed the color";
+        left.style.backgroundColor = "red";
+        // left.style.backgroundColor = "green";
+        flipper.style.backgroundColor = "blue";
+        flipper.style.color = "white";
+
+        // document.getElementById('right').backgroundColor = multicolor;
+       
+    }
+
+    </script>
+</body>
+</html>
